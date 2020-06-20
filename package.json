@@ -1,0 +1,25 @@
+{
+  "name": "boyfriend",
+  "version": "1.0.8",
+  "description": "Boyfriend bot is a simple bot with fun responses for all the simps, or just overall lonely people in your Discord.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxThakurCodes/boyfriendbot.git"
+  },
+  "author": "Max Thakur, Robbie Phucker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaxThakurCodes/boyfriendbot/issues"
+  },
+  "homepage": "https://github.com/MaxThakurCodes/boyfriendbot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
