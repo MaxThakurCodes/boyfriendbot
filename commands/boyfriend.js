@@ -1,7 +1,6 @@
 const Discord = require('discord.js')
 const cevaplar = [
   'hey baby',
-  //       'mmh shawty',
   'i love you',
   '*loves you in french*',
   'hmu :wink:',
