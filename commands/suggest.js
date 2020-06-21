@@ -13,4 +13,5 @@ module.exports.run = (client, message, args) => {
       dynamic: true,
       size: 2048
     }))
+  message.channel.send(embed);
 }
