@@ -10,7 +10,7 @@ exports.run = async (client, msg, args) => {
     .addField(':person_raising_hand: Want your name in the credits?', 'Fill out our suggestion google form! https://forms.gle/DihjEbVfKqUmVSJt6')
     .addField(':sparkles: Help Support the Bot!', 'Feel free to vote for the bot to help us get noticed by more people! https://bit.ly/BoyfriendVote')
     .setTimestamp()
-    .setFooter("Requested by " + message.author.tag, message.author.avatarURL({
+    .setFooter("Requested by " + msg.author.tag, msg.author.avatarURL({
       format: "png",
       dynamic: true,
       size: 2048
