@@ -13,7 +13,7 @@ let prefix = config.prefix;
 const queue = new Map();
 
 client.on("ready", async () => {
-  client.user.setActivity('with your feelings | -help for cmds', { type: 'PLAYING' }).then(l => {
+  client.user.setActivity('with your feelings | -help | -invite', { type: 'PLAYING' }).then(l => {
     console.log('Boyfriend Bot is ready bitch')
   }).catch(console.error);
 })
