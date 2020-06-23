@@ -14,7 +14,7 @@ const cevaplar = [
   'send a random person a dm saying "have a good day"',
   'send the first image in yoru gallery',
   'send your desktop wallpaper',
-  'make ur pfp for an hour https://media.discordapp.net/attachments/693242531575758889/724890294226649138/unknown.png',
+  'make ur pfp this for an hour https://media.discordapp.net/attachments/693242531575758889/724890294226649138/unknown.png',
   'send your favorite song',
   'show your search history',
   'turn on discords light mode for an hour',
