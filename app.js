@@ -9,7 +9,7 @@ require("dotenv").config()
 const client = new Discord.Client();
 //prefix
 let prefix = config.prefix;
-//idk
+//Unknow
 const queue = new Map();
 
 client.on("ready", async () => {
