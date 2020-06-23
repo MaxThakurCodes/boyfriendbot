@@ -3,7 +3,7 @@ const cevaplar = [
   'ping @/everyone',
   'post the last image on your gallery',
   'post the last selfie of you',
-  'ping the person that gest most annoyed by pings',
+  'ping the person that gets most annoyed by pings',
   'film yourself dabing',
   'sigh a black lives matter change.org',
   'film yourself singing as high as you can',
@@ -38,7 +38,7 @@ exports.conf = {
   permLevel: 0
 };
 exports.help = {
-  name: 'dare',
-  description: 'dare command',
-  usage: '-dare'
+  name: 'gamedare',
+  description: 'gamedare command',
+  usage: '-gamedare'
 };

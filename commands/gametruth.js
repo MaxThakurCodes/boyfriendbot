@@ -39,7 +39,7 @@ exports.conf = {
   permLevel: 0
 };
 exports.help = {
-  name: 'truth',
-  description: 'truth command',
-  usage: '-truth'
+  name: 'gametruth',
+  description: 'gametruth command',
+  usage: '-gametruth'
 };

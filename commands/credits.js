@@ -4,7 +4,7 @@ exports.run = async (client, msg, args) => {
   let embed = new Discord.MessageEmbed()
     .setColor('#7289DA')
     .setAuthor('Boyfriend Bot Alpha Contributors')
-    .addField(':desktop: Developer Credits', '&robbie#2544 (Creator), Max Thakur#0831 (Rewritten for D.js v12)*')    
+    .addField(':desktop: Developer Credits', '*robbie#2544 (Creator), Max Thakur#0831 (Rewritten for D.js v12)*')    
     .addField(':pencil: Suggestion Credits:', '*mwilky ☆#0929, 🍼ʙᴀʙʏ🍼#5501, Piggy#9713, Bless#5049*')
     .addField(':selfie: Boyfriend Bot Profile Picture:', '*Tony Lopez (@tony_lopez IG)*')
     .addField(':person_raising_hand: Want your name in the credits?', '*Fill out our suggestion google form! https://forms.gle/DihjEbVfKqUmVSJt6*')
