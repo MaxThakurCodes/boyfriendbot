@@ -12,7 +12,8 @@ exports.run = async (client, msg, args) => {
     .addField('UPDATES -  1.0.6 𝐚𝐥𝐩𝐡𝐚', 'Added -date (thanks @mwilky ☆#0929) and removed some commands nobody used. Also cleaned up a few things like grammar is some places. (6/18/2020)')
     .addField('UPDATES -  1.0.7 𝐚𝐥𝐩𝐡𝐚', 'Cleaned up Boyfriend Bot commands! Beta will be launching soon! (6/19/2020)')
     .addField('UPDATES -  1.0.8 𝐚𝐥𝐩𝐡𝐚', "We switched to Discord.js V12, and cleaned up all commands! (6/20/2020)")
-    .addField('REMEMBER', 'Boyfriend bot is still in alpha, some features may not work as I work every day to make sure the bot is perfect, if you would love to support the bot invite it to your server by running -invite.')
+    .addField('UPDATES -  1.0.9 𝐟𝐢𝐧𝐚𝐥 𝐚𝐥𝐩𝐡𝐚', "New profile picture for Boyfriend Bot! We fixed up a few things and added the `-gametruth` and `-gamedare` commands. See you on the otherside in Beta!(6/20/2020)")
+    .addField('REMEMBER', 'Boyfriend bot is still in alpha, some features may not work as we work every day to make sure the bot is perfect, if you would love to support the bot invite it to your server by running -invite.')
     .setFooter('𝐁𝐎𝐘𝐅𝐑𝐈𝐄𝐍𝐃 𝐁𝐎𝐓 𝐀𝐋𝐏𝐇𝐀 - 𝐜𝐢𝐭𝐢𝐳𝐞𝐧𝐬 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭');
   msg.channel.send(embed);
 
