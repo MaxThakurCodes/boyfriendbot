@@ -34,7 +34,7 @@ module.exports.run = (client, message, args) => {
 
 
 }
-
+//owo
 module.exports.help = {
   name: "check"
 }
