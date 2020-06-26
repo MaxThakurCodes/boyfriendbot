@@ -18,7 +18,7 @@ module.exports.run = (client, message, args) => {
       user = message.guild.members.get(args.slice(0, 1).join(' '));
       user = user.user;
     } catch (error) {
-      return message.reply('baby I couldn\' get a user with this userID!');
+      return message.reply('baby I couldn\'t get a user with this userID!');
     }
   }
   if (user === message.author) return message.channel.send('baby thats suicide- you can\'t ban yourself'); // Check if the user mention or the entered userID is the message author himsmelf
