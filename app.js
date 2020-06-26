@@ -13,11 +13,28 @@ const client = new Discord.Client();
 let prefix = config.prefix;
 //Unknow
 const queue = new Map();
+//Presence List
+const presenceList = [
+  "with your feelings",
+  "for -help",
+  "for -invite"
+]
+const statusList = [
+  "PLAYING",
+  "WATCHING",
+  "WATCHING"
+]
 
 client.on("ready", async () => {
-  client.user.setActivity('with your feelings | -help | -invite |', { type: 'PLAYING' }).then(l => {
-    console.log('Boyfriend Bot is ready bitch')
-  }).catch(console.error);
+  client.user.setActivity("start up", { type: "PLAYING" })
+  setInterval(async () => {
+    i = Math.floor(Math.random() * (presenceList.length))
+    console.log(presenceList[i])
+    console.log(statusList[i])
+    client.user.setActivity(presenceList[i], { type: statusList[i] });
+  }, 10000);
+
+  console.log('Boyfriend Bot is ready bitch')
 })
 
 client.on("message", async (msg) => {
@@ -29,7 +46,6 @@ client.on("message", async (msg) => {
   var messageArray = msg.content.split(" ");
   var searchString = messageArray.slice(1).join(' ');
   var url = args[1] ? args[1].replace(/<(.+)>/g, '$1') : '';
-  //console.log(searchString);
   var serverQueue = queue.get(msg.guild.id);
   var sender = msg.author;
   var cmd = args.shift().toLowerCase();
