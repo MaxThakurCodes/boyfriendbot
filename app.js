@@ -27,7 +27,7 @@ client.on("message", async (msg) => {
   var messageArray = msg.content.split(" ");
   var searchString = messageArray.slice(1).join(' ');
   var url = args[1] ? args[1].replace(/<(.+)>/g, '$1') : '';
-  console.log(searchString);
+  //console.log(searchString);
   var serverQueue = queue.get(msg.guild.id);
   var sender = msg.author;
   var cmd = args.shift().toLowerCase();
@@ -38,11 +38,11 @@ client.on("message", async (msg) => {
   } catch (e) {
     console.log(e.stack);
   } finally {
-    console.log(`---`)
+    /*console.log(`---`)
     console.log(`${msg.author.tag} has used the -${cmd} command`);
     console.log(`server name: ${msg.guild.name} `);
     console.log(`server id: ${msg.guild.id} `);
-    console.log(`---`)
+    console.log(`---`)*/
 
   }
 });
