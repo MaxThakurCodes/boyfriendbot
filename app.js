@@ -29,8 +29,6 @@ client.on("ready", async () => {
   client.user.setActivity("start up", { type: "PLAYING" })
   setInterval(async () => {
     i = Math.floor(Math.random() * (presenceList.length))
-    console.log(presenceList[i])
-    console.log(statusList[i])
     client.user.setActivity(presenceList[i], { type: statusList[i] });
   }, 10000);
 
