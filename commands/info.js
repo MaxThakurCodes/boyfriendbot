@@ -21,7 +21,7 @@ exports.run = async (client, message, args) => {
 
 
   let embed = new Discord.MessageEmbed()
-    .setAuthor("Boyfriend Bot Alpha", client.user.AvatarURL)
+    .setAuthor("Boyfriend Bot", client.user.AvatarURL)
     .setColor('#7289DA')
     //  .addField("BFB Status: ", `${botstats}`)
     //  .addField(":cyclone: Users interact: ", botuser, true)

@@ -1,10 +1,10 @@
 const Discord = require("discord.js")
 module.exports.run = (client, message, args) => {
-  if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Sorry b, but only users with the permission \"Kick Members\" can kick people.")
+  if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("sorry baby, but only users with the permission \"Kick Members\" can kick people.")
   const user = message.mentions.users.first(); // returns the user object if an user mention exists
   let kickReason;
   if (!args[1]) {
-    kickReason = "No reason provided <3"
+    kickReason = "No reason provided ho <3"
   } else {
     kickReason = args.slice(1).join(' ');
   }
@@ -22,7 +22,7 @@ module.exports.run = (client, message, args) => {
     }
   }
   if (user === message.author) return message.channel.send('Silly, you can\'t kick yourself'); // Check if the user mention or the entered userID is the message author himsmelf
-  if (!message.guild.member(user).kickable) return message.reply('Hey bb, I don\'t seem to be able to kick that user cause they have a higher role than me'); // Check if the user is kicknable with the bot's permissions
+  if (!message.guild.member(user).kickable) return message.reply('Hey bb, I don\'t seem to be able to kick that user cause they have a higher role than me :eyes: '); // Check if the user is kicknable with the bot's permissions
   let kEmbed = new Discord.MessageEmbed()
     .setTitle("[Logs] Kick")
     .setColor([
@@ -36,8 +36,8 @@ module.exports.run = (client, message, args) => {
     .setFooter(message.author.tag, message.author.avatarURL())
     .setTimestamp()
   let logsChannel = message.guild.channels.cache.find(channel => channel.name === "logs")
-  if (!logsChannel) return message.reply("Please make a logs channel, if you already have one make sure I have permissions to it!")
-  user.send("You were kicked from the guild `" + message.guild.name + "` for the reason `" + kickReason + "`")
+  if (!logsChannel) return message.reply("baby please make a channel for logging, if you have one make sure I can chat on it.")
+  user.send("lol you were kicked from the guild `" + message.guild.name + "` for the reason `" + kickReason + "`")
   message.guild.member(user).kick(kickReason);
   logsChannel.send(kEmbed);
 }
