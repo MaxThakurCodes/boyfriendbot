@@ -3,6 +3,8 @@
 const Discord = require("discord.js");
 //config
 const config = require("./config.json")
+//fs
+const fs = require("fs")
 //dotenv (.env support)
 require("dotenv").config()
 //client *no you*
@@ -38,12 +40,18 @@ client.on("message", async (msg) => {
   } catch (e) {
     console.log(e.stack);
   } finally {
-    /*console.log(`---`)
+    console.log(`---`)
     console.log(`${msg.author.tag} has used the -${cmd} command`);
     console.log(`server name: ${msg.guild.name} `);
     console.log(`server id: ${msg.guild.id} `);
-    console.log(`---`)*/
-
+    console.log(`---`)
+    //"advance logging"
+    let today = new Date()
+    let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    let dateTime = date + ' ' + time;
+    console.log(dateTime)
+    fs.appendFileSync("./logs/logs.txt", `---\n${msg.author.tag} has used -${cmd}\nserver name: ${msg.guild.name}\nserver id: ${msg.guild.id}\ntime: ${dateTime} ---\n`)
   }
 });
 
