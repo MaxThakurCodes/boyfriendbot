@@ -6,7 +6,7 @@ exports.run = async (client, msg, args) => {
     .setAuthor('Boyfriend Bot Commands', "https://www.freepnglogos.com/uploads/heart-png/emoji-heart-33.png")
     .addField(':speak_no_evil: Boyfriend Bot Fun:', '*-boyfriend, -slap, -kiss, -date*')
     .addField(':partying_face: General Fun:', '*-pickupline, -gametruth, -gamedare, -truthordare*')
-    .addField(':ok_hand: Utility:', '*-help, -avatar (@user), -check (@user), -updatelog, -invite, -info (Information on bot), -suggest, -vote, -credits*')
+    .addField(':ok_hand: Utility:', '*-help, -avatar (@user), -check (@user), -updatelog, -invite, -info (Information on bot), -suggest, -credits*')
     .addField(":see_no_evil: NSFW Comannds:", "*-fuck, -sex, -penis*")
     .addField(':cop: Moderation:', '*-kick, -ban, -purge*')
     .addField(':sparkles: Help Support the Bot!', '*Feel free to vote for the bot to help us get noticed by more people! https://bit.ly/BoyfriendVote*')
