@@ -13,7 +13,7 @@ module.exports.run = (client, message, args) => {
   if (!user) {
     try {
       // Check if a valid userID has been entered instead of a Discord user mention
-      if (!message.guild.members.get(args.slice(0, 1).join(' '))) throw new Error('baby I couldn\' get a user with this userID!');
+      if (!message.guild.members.get(args.slice(0, 1).join(' '))) throw new Error('baby I couldn\'t get a user with this userID!');
       // If the client (bot) can get a user with this userID, it overwrites the current user variable to the user object that the client fetched
       user = message.guild.members.get(args.slice(0, 1).join(' '));
       user = user.user;
@@ -37,7 +37,7 @@ module.exports.run = (client, message, args) => {
     .setFooter(message.author.tag, message.author.avatarURL())
     .setTimestamp()
   let logsChannel = message.guild.channels.cache.find(channel => channel.name === "logs")
-  if (!logsChannel) return message.reply("baby please make a channel for logging, if you have one make sure I can chat on it.")
+  if (!logsChannel) return message.reply("baby please make a channel for logging, if you have one make sure I can chat on it. (Make a channel named `logs`.)")
   user.send(":rage: bro you were banned from the guild `" + message.guild.name + "` with the reason `" + banReason + "`")
   message.guild.member(user).ban({
     reason: banReason

@@ -30,7 +30,7 @@ module.exports.run = (client, message, args) => {
     .setFooter(message.author.tag, message.author.avatarURL())
     .setTimestamp()
   let logsChannel = message.guild.channels.cache.find(channel => channel.name === "logs")
-  if (!logsChannel) return message.reply("baby please make a channel for logging, if you have one make sure I can chat on it.")
+  if (!logsChannel) return message.reply("baby please make a channel for logging, if you have one make sure I can chat on it. (Make a channel named `logs`.)")
   logsChannel.send(embed);
   Pchannel.bulkDelete(amount).catch(err => {
     if (err) {
