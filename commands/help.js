@@ -13,5 +13,5 @@ exports.run = async (client, msg, args) => {
     .setFooter('𝐁𝐎𝐘𝐅𝐑𝐈𝐄𝐍𝐃 𝐁𝐎𝐓 𝐀𝐋𝐏𝐇𝐀 - 𝐜𝐢𝐭𝐢𝐳𝐞𝐧𝐬 𝐝𝐞𝐯𝐞𝐥𝐨𝐩𝐦𝐞𝐧𝐭');
   msg.channel.send(embed);
 
-
+//applesandbananas
 };
