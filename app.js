@@ -21,7 +21,7 @@ client.on("ready", async () => {
 client.on("message", async (msg) => {
   if (msg.author.bot) return;
   if (msg.channel.type === "dm") return;
-  if (msg.content === "hi" || msg.content === "Hi" || msg.content === "Hello!" || msg.content === "Hello" || msg.content === "hello") return msg.channel.send("Hey, qt!")
+  //if (msg.content === "hi" || msg.content === "Hi" || msg.content === "Hello!" || msg.content === "Hello" || msg.content === "hello") return msg.channel.send("Hey, qt!")
   if (!msg.content.startsWith(prefix)) return;
   var args = msg.content.slice(prefix.length).trim().split(' ');
   var messageArray = msg.content.split(" ");
