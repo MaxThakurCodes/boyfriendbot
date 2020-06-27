@@ -1,5 +1,10 @@
 const Discord = require('discord.js')
 const cevaplar = [
+  '
+  'I’m learning about important dates in history. Wanna be one of them?',
+  'Do you have a BandAid? I just scraped my knee falling for you.',
+  'Is your name Google? Because you have everything I’ve been searching for.',
+  'Something’s wrong with my eyes because I can’t take them off you.',
   'Aside from being sexy, what do you do for a living?',
   'Hey, my names Microsoft. Can I crash at your place tonight?',
   'Do you like raisins? How do you feel about a date',
