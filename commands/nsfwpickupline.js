@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const { RandomReddit } = require('random-reddit')
 require("dotenv").config()
 exports.run = async function (client, message, args) {
-  if (!message.channel.nsfw) return message.channel.send("lmao girl lets get a room first- (must be used in a channel marked NSFW)")
+  if (!message.channel.nsfw) return message.channel.send("um can we go somewhere private for this?- (must be used in a channel marked NSFW)")
   const reddit = new RandomReddit({
     username: 'MaxThakurCodes',
     password: process.env.redditp,
