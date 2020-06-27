@@ -1,6 +1,6 @@
 {
   "name": "boyfriend",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Boyfriend bot is a simple bot with fun responses for all the simps, or just overall lonely people in your Discord.",
   "main": "app.js",
   "scripts": {
