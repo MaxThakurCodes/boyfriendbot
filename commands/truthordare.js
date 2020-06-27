@@ -1,6 +1,5 @@
 const Discord = require('discord.js')
 const cevaplar = [
-  'ping @/everyone',
   'post the last image on your gallery',
   'post the last selfie of you',
   'ping the person that gets most annoyed by pings',
@@ -8,9 +7,8 @@ const cevaplar = [
   'sigh a black lives matter change.org',
   'film yourself singing as high as you can',
   'send your 5 most recent emojis',
-  'invite me to your discord server ;)',
+  'invite me to your discord server ;) `-invite`',
   'change your username to `boyfriendbot\'s s/o`',
-  'ping @/here',
   'send a random person a dm saying "have a good day"',
   'send the first image in yoru gallery',
   'send your desktop wallpaper',
