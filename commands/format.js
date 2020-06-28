@@ -7,7 +7,8 @@ exports.run = async (client, message, args) => {
     .setAuthor('Boyfriend Bot Formats', "https://www.freepnglogos.com/uploads/heart-png/emoji-heart-33.png")
     .addField(':bangbang: BAN', '-ban @user#2544 reason')
     .addField(':wave: KICK', '-kick @user#2544 reason')
-    .addField(':wave: PURGE', '-purge (number)')
+    .addField(':no_entry_sign:  PURGE', '-purge (number)')
+    .addField(':twisted_rightwards_arrows:  PREFIX CHANGE', 'First run *-add* if you have not already. Then run *-sprefix (prefix here)')    
     .setTimestamp()
     .setFooter("Requested by " + message.author.tag, message.author.avatarURL({
       format: "png",

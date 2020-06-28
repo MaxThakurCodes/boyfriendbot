@@ -12,6 +12,7 @@ exports.run = async (client, msg, args) => {
   let embed = new Discord.MessageEmbed()
     .setColor(`#7289DA`)
     .setAuthor(`Boyfriend Bot Commands`, "https://www.freepnglogos.com/uploads/heart-png/emoji-heart-33.png")
+    .addField(`:sunglasses: How to change the prefix:`, `First you must run the *-add* command once that is done you can run *-sprefix (desired prefix)* to change the prefix!`)
     .addField(`:speak_no_evil: Boyfriend Bot Fun:`, `*${prefix}boyfriend, ${prefix}slap, ${prefix}kiss, ${prefix}date*`)
     .addField(`:partying_face: General Fun:`, `*${prefix}pickupline, ${prefix}nsfwpickuplines (Must be used in NSFW marked channel), ${prefix}gametruth, ${prefix}gamedare, ${prefix}truthordare*`)
     .addField(`:ok_hand: Utility:`, `*${prefix}help, ${prefix}icon, ${prefix}avatar (@user), ${prefix}check (@user), ${prefix}updatelog, ${prefix}invite, ${prefix}info, ${prefix}suggest, ${prefix}credits, ${prefix}prefix*`)

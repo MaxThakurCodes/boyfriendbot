@@ -3,5 +3,5 @@ const Discord = require("discord.js"),
 exports.run = async function (client, message, args) {
   let fServer = await Server.findOne({ serverId: message.guild.id })
   let prefix = fServer.prefix
-  return message.reply("The prefix is `" + prefix + "`")
+  return message.reply("Baby the prefix is `" + prefix + "`")
 }
