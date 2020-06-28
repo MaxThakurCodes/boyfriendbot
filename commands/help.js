@@ -2,13 +2,13 @@ const Discord = require("discord.js");
 const Server = require("../models/server")
 
 exports.run = async (client, msg, args) => {
-  let fS = await Server.findOne({ guildId: msg.guild.id })
+  let fServer = await Server.findOne({ guildId: msg.guild.id })
   let prefix;
-  if (fS === null) {
+  if (fServer === null) {
     prefix = "-"
   } else {
-    console.log(fS)
-    prefix = await fS.prefix
+    console.log(fServer)
+    prefix = await fServer.prefix
   }
   let embed = new Discord.MessageEmbed()
     .setColor(`#7289DA`)
