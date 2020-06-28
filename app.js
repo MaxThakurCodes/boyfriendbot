@@ -46,7 +46,7 @@ client.on("message", async (msg) => {
   if (mserver !== null) {
     prefix = await mserver.prefix
   } else {
-    prefix = "="
+    prefix = "-"
   }
   let bpargs = msg.content.trim().split(' ')
   if (msg.mentions.has(client.user)) {
