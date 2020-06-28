@@ -1,16 +1,18 @@
 //Requires
 //Discord
 const Discord = require("discord.js");
-//config
-const config = require("./config.json")
-//fs
-const fs = require("fs")
 //dotenv (.env support)
 require("dotenv").config()
+//mongoose
+const mongoose = require("mongoose")
+mongoose.connect(process.env.mongouri, { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true }).then(c => console.log("connected to mongodb"))
+const db = mongoose.connection
+//schema for mongo
+const Server = require("./models/server")
+//fs
+const fs = require("fs")
 //client *no you*
 const client = new Discord.Client();
-//prefix
-let prefix = config.prefix;
 //Unknow
 const queue = new Map();
 //Presence List
@@ -39,13 +41,20 @@ client.on("message", async (msg) => {
   if (msg.author.bot) return;
   if (msg.channel.type === "dm") return;
   //if (msg.content === "hi" || msg.content === "Hi" || msg.content === "Hello!" || msg.content === "Hello" || msg.content === "hello") return msg.channel.send("Hey, qt!")
+  let mserver = await Server.findOne({ serverId: msg.guild.id })
+  let prefix;
+  if (mserver !== null) {
+    prefix = await mserver.prefix
+  } else {
+    prefix = "="
+  }
+  let bpargs = msg.content.trim().split(' ')
+  if (msg.mentions.has(client.user)) {
+    if (bpargs.length > 1) return
+    return msg.reply("my prefix for this server is `" + prefix + "`")
+  }
   if (!msg.content.startsWith(prefix)) return;
   var args = msg.content.slice(prefix.length).trim().split(' ');
-  var messageArray = msg.content.split(" ");
-  var searchString = messageArray.slice(1).join(' ');
-  var url = args[1] ? args[1].replace(/<(.+)>/g, '$1') : '';
-  var serverQueue = queue.get(msg.guild.id);
-  var sender = msg.author;
   var cmd = args.shift().toLowerCase();
   try {
     let commandFile = require(`./commands/${cmd}.js`);
@@ -66,5 +75,27 @@ client.on("message", async (msg) => {
     console.log(`---`)
   }
 });
+
+client.on("guildCreate", async guild => {
+  try {
+    let newServer = new Server({
+      serverName: guild.name,
+      serverId: guild.id,
+      owner: guild.owner.id
+    })
+    await newServer.save()
+    guild.owner.send("Hey there, thanks for adding Boyfriend bot! Please run `-setup` to get your server setup!")
+  } catch (error) {
+    console.log(error)
+  }
+})
+
+client.on("guildDelete", async guild => {
+  try {
+    await Server.deleteOne({ serverId: guild.id })
+  } catch (error) {
+    console.log(error)
+  }
+})
 
 client.login(process.env.TOKEN)
