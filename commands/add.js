@@ -2,6 +2,7 @@ const Discord = require("discord.js"),
   mongoose = require("mongoose"),
   Server = require("../models/server");
 exports.run = async function (client, message, args) {
+  if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Only users with admin permissions can add this server to the database!")
   let msg = await message.channel.send("Checking database...")
   let fserver = await Server.findOne({ serverName: message.guild.name })
   if (fserver === null) {
