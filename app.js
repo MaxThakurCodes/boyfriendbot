@@ -84,6 +84,7 @@ client.on("guildCreate", async guild => {
       owner: guild.owner.id
     })
     await newServer.save()
+    //guild.owner.send("Hey there, thanks for adding Boyfriend bot! Please run `-setup` to get your server setup!")
   } catch (error) {
     console.log(error)
   }
