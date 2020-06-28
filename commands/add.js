@@ -9,7 +9,7 @@ exports.run = async function (client, message, args) {
       let CguildName = Cguilds.map(g => g.name)
       let CguildOwner = Cguilds.map(g => g.ownerID)
       let fserver;
-      for (i = 0; i < Cguildid.length; i++) {
+      for (i = args[1]; i < args[2]; i++) {
         fserver = await Server.findOne({ serverId: Cguildid[i] })
         if (fserver === null) {
           let newServer = new Server({
