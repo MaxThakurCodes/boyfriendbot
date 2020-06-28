@@ -7,7 +7,8 @@ exports.run = async (client, msg, args) => {
   if (fS === null) {
     prefix = "-"
   } else {
-    prefix = fs.prefix
+    console.log(fS)
+    prefix = await fS.prefix
   }
   let embed = new Discord.MessageEmbed()
     .setColor(`#7289DA`)
