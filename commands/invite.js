@@ -8,6 +8,7 @@ module.exports.run = (client, message, args) => {
     .addField('Invite me to your place :house: ', 'https://discord.com/oauth2/authorize?client_id=487395837610295317&scope=bot&permissions=8')
     .addField('Join the Citizens community support server to get any support you may need. ✌', 'https://discord.gg/hBfmxVt')
     .addField('Vote for the me on top.gg? 🎉', 'https://top.gg/bot/487395837610295317/vote')
+    .addField('Want to vote somewhere else?', 'Alternatively you can vote at https://discordbotlist.com/bots/boyfriend-bot/upvote.')
     .setColor('#7289DA')
     .setTimestamp()
     .setFooter("Requested by " + message.author.tag, message.author.avatarURL({
