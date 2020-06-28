@@ -2,12 +2,11 @@ const Discord = require("discord.js");
 const Server = require("../models/server")
 
 exports.run = async (client, msg, args) => {
-  let fServer = await Server.findOne({ guildId: msg.guild.id })
+  let fServer = await Server.findOne({ serverId: msg.guild.id })
   let prefix;
   if (fServer === null) {
     prefix = "-"
   } else {
-    console.log(fServer)
     prefix = await fServer.prefix
   }
   let embed = new Discord.MessageEmbed()
