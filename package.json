@@ -1,6 +1,6 @@
 {
   "name": "boyfriend",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Boyfriend bot is a simple bot with fun responses for all the simps, or just overall lonely people in your Discord.",
   "main": "app.js",
   "scripts": {
@@ -18,11 +18,13 @@
   },
   "homepage": "https://github.com/MaxThakurCodes/boyfriendbot#readme",
   "dependencies": {
+    "beautify": "0.0.8",
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "mongoose": "^5.9.20",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.4",
-    "random-reddit": "^1.1.0"
+    "random-reddit": "^1.1.0",
+    "util": "^0.12.3"
   }
 }
