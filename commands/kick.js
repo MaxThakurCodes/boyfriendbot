@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-module.exports.run = (client, message, args) => {
+module.exports.run = async (client, message, args) => {
   if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("sorry baby, but only users with the permission \"Kick Members\" can kick people.")
   const user = message.mentions.users.first(); // returns the user object if an user mention exists
   let kickReason;
@@ -37,7 +37,7 @@ module.exports.run = (client, message, args) => {
     .setTimestamp()
   let logsChannel = message.guild.channels.cache.find(channel => channel.name === "logs")
   if (!logsChannel) return message.reply("baby please make a channel for logging, if you have one make sure I can chat on it. (Make a channel named `logs`.)")
-  user.send("lol you were kicked from the guild `" + message.guild.name + "` for the reason `" + kickReason + "`")
+  await user.send("You were kicked from `" + message.guild.name + "` for the reason `" + kickReason + "`")
   message.guild.member(user).kick(kickReason);
   logsChannel.send(kEmbed);
 }
