@@ -8,7 +8,7 @@ module.exports.run = (client, message, args) => {
     let embed = new Discord.MessageEmbed()
       .setColor('#7289DA')
       .setDescription(`*kisses* baby ilysm :pleading_face: :star_struck: `)
-      .setImage("https://cdn.glitch.com/46d9938f-6028-4734-805c-ee0f09cf1826%2F96713d4b-9c25-415c-93a2-1005a214e18f.image.png?v=1591008260279")
+  //    .setImage("https://cdn.glitch.com/46d9938f-6028-4734-805c-ee0f09cf1826%2F96713d4b-9c25-415c-93a2-1005a214e18f.image.png?v=1591008260279")
     message.channel.send(embed);
   }
 
@@ -16,7 +16,7 @@ module.exports.run = (client, message, args) => {
     let embed = new Discord.MessageEmbed()
       .setColor('#7289DA')
       .setDescription(`DAMNNNN you got kissed by `)
-      .setImage("https://cdn.glitch.com/46d9938f-6028-4734-805c-ee0f09cf1826%2F96713d4b-9c25-415c-93a2-1005a214e18f.image.png?v=1591008260279")
+   //   .setImage("https://cdn.glitch.com/46d9938f-6028-4734-805c-ee0f09cf1826%2F96713d4b-9c25-415c-93a2-1005a214e18f.image.png?v=1591008260279")
     message.channel.send(embed);
   }
 
