@@ -1,5 +1,5 @@
 const Discord = require("discord.js")
-module.exports.run = (client, message, args) => {
+module.exports.run = async (client, message, args) => {
   if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("bruh only admins can use this command")
   const user = message.mentions.users.first(); // returns the user object if an user mention exists
   let banReason;
@@ -38,7 +38,7 @@ module.exports.run = (client, message, args) => {
     .setTimestamp()
   let logsChannel = message.guild.channels.cache.find(channel => channel.name === "logs")
   if (!logsChannel) return message.reply("baby please make a channel for logging, if you have one make sure I can chat on it. (Make a channel named `logs`.)")
-  user.send(":rage: bro you were banned from the guild `" + message.guild.name + "` with the reason `" + banReason + "`")
+  await user.send(":rage: You were banned from `" + message.guild.name + "` with the reason `" + banReason + "`")
   message.guild.member(user).ban({
     reason: banReason
   });
