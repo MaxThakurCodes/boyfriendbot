@@ -13,9 +13,9 @@ module.exports.run = async (client, message, args) => {
   if (!user) {
     try {
       // Check if a valid userID has been entered instead of a Discord user mention
-      if (!message.guild.members.get(args.slice(0, 1).join(' '))) throw new Error('baby I couldn\'t get a user with this userID!');
+      if (!message.guild.members.cache.get(args.slice(0, 1).join(' '))) throw new Error('baby I couldn\'t get a user with this userID!');
       // If the client (bot) can get a user with this userID, it overwrites the current user variable to the user object that the client fetched
-      user = message.guild.members.get(args.slice(0, 1).join(' '));
+      user = message.guild.members.cache.get(args.slice(0, 1).join(' '));
       user = user.user;
     } catch (error) {
       return message.reply('baby I couldn\'t get a user with this userID!');
