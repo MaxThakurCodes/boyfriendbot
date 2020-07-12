@@ -12,7 +12,7 @@ const Server = require("./models/server")
 //fs
 const fs = require("fs")
 //client *no you*
-const client = new Discord.Client();
+const client = new Discord.Client({disableEveryone: True});
 //Unknow
 const queue = new Map();
 //Presence List
