@@ -68,7 +68,7 @@ client.on("message", async (msg) => {
     let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     let dateTime = date + ' ' + time;
     console.log(`---`)
-    console.log(`${msg.author.tag} has used the -${cmd} command`);
+    console.log(`${msg.author.tag} has used the ${prefix}${cmd} command`);
     console.log(`server name: ${msg.guild.name} `);
     console.log(`server id: ${msg.guild.id} `);
     console.log(`time: ${dateTime}`)
