@@ -38,8 +38,7 @@ client.on("ready", async () => {
 })
 
 client.on("message", async (msg) => {
-  if (msg.author.bot) return;
-  if (msg.channel.type === "dm") return;
+  if (msg.author.bot || msg.channel.type === "dm") return;
   //if (msg.content === "hi" || msg.content === "Hi" || msg.content === "Hello!" || msg.content === "Hello" || msg.content === "hello") return msg.channel.send("Hey, qt!")
   let mserver = await Server.findOne({ serverId: msg.guild.id })
   let prefix;
