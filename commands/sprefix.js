@@ -1,8 +1,15 @@
 const Discord = require("discord.js"),
   Server = require("../models/server");
 exports.run = async function (client, message, args) {
+  let mserver = await Server.findOne({ serverId: message.guild.id })
+  let prefix;
+  if (mserver !== null) {
+    prefix = await mserver.prefix
+  } else {
+    prefix = "-"
+  }
   if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Only users with admin permissions can set the prefix.")
-  if (!args[0]) return message.reply("Baby please tell me what you would like to change the prefix too- (-sprefix (prefix))")
+  if (!args[0]) return message.reply(`Baby please tell me what you would like to change the prefix too- (${prefix}sprefix (prefix))`)
   let msg = await message.channel.send("Changing prefix to: `" + args[0] + "`")
   await Server.findOneAndUpdate({ serverId: message.guild.id }, { prefix: args[0] }).then(p => {
     msg.edit("\nI changed the prefix to: `" + args[0] + "`")
