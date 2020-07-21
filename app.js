@@ -3,6 +3,8 @@
 const Discord = require("discord.js");
 //dotenv (.env support)
 require("dotenv").config()
+//package.json
+const packageJson = require("./package.json")
 //mongoose
 const mongoose = require("mongoose")
 mongoose.connect(process.env.mongouri, { useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true }).then(c => console.log("connected to mongodb"))
@@ -19,12 +21,14 @@ const queue = new Map();
 const presenceList = [
   "with your feelings",
   "for -help",
-  "for -invite"
+  "for -invite",
+  `with version ${packageJson.version}`
 ]
 const statusList = [
   "PLAYING",
   "WATCHING",
-  "WATCHING"
+  "WATCHING",
+  "PLAYING"
 ]
 
 client.on("ready", async () => {
