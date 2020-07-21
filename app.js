@@ -48,7 +48,7 @@ client.on("message", async (msg) => {
     prefix = "-"
   }
   let bpargs = msg.content.trim().split(' ')
-  if (msg.mentions.has(client.user)) {
+  if (msg.mentions.has(client.user) && !msg.mentions.everyone) {
     if (bpargs.length > 1) return
     return msg.reply("my prefix for this server is `" + prefix + "`")
   }
