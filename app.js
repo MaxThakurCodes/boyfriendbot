@@ -22,13 +22,15 @@ const presenceList = [
   "with your feelings",
   "for -help",
   "for -invite",
-  `with version ${packageJson.version}`
+  `with version ${packageJson.version}`,
+  `1020 lines of code`
 ]
 const statusList = [
   "PLAYING",
   "WATCHING",
   "WATCHING",
-  "PLAYING"
+  "PLAYING",
+  "WATCHING"
 ]
 
 client.on("ready", async () => {
