@@ -5,7 +5,7 @@ module.exports.run = (client, message, args) => {
     let u = Math.floor(Math.random() * 5)
     let embed = new Discord.MessageEmbed()
     .setTitle("Lakeview Middle School Info!")
-    .setDescription("Lakeview Middle School is a Roblox School community apart of the Ro-Educational community. Lakeview Middle School was founded by Omlgoing, also known as Going. Lakeview Middle School was created in January of 2020, but opened to the public on March 2020. Lakeview Middle School is still hosting sessions till this day and it is still being runned by Going. Thank you for reading the information on how Lakeview started!")
+    .setDescription("[Lakeview Middle School](https://www.roblox.com/groups/1143892/Lakeview-Middle-School-LMS#!/about) is a Roblox School community apart of the Ro-Educational community. Lakeview Middle School was founded by Omlgoing, also known as Going. Lakeview Middle School was created in January of 2020, but opened to the public on March 2020. Lakeview Middle School is still hosting sessions till this day and it is still being runned by Going. Thank you for reading the information on how Lakeview started!")
     .setFooter(message.author.tag, message.author.avatarURL({dynamic: true}))
     .setColor("#90EE90")
     .setTimestamp()
