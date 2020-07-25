@@ -1,4 +1,4 @@
-//Requires
+//*Requires
 //Discord
 const Discord = require("discord.js");
 //dotenv (.env support)
