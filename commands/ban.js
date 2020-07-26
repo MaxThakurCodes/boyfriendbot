@@ -21,8 +21,8 @@ module.exports.run = async (client, message, args) => {
       return message.reply('baby I couldn\'t get a user with this userID!');
     }
   }
-  if (user === message.author) return message.channel.send('baby thats suicide- you can\'t ban yourself'); // Check if the user mention or the entered userID is the message author himsmelf
-  if (!message.guild.member(user).bannable) return message.reply('um baby... I can\'t ban this user because I dont have perms to-'); // Check if the user is bannable with the bot's permissions
+  if (user === message.author) return message.channel.send('baby thats suicide- you can\'t ban yourself :frowning: '); // Check if the user mention or the entered userID is the message author himsmelf
+  if (!message.guild.member(user).bannable) return message.reply('um baby... I can\'t ban this user because I dont have perms to- :pensive: '); // Check if the user is bannable with the bot's permissions
   console.log(user)
   let bEmbed = new Discord.MessageEmbed()
     .setTitle("[Logs] Ban")

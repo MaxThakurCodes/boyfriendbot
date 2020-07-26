@@ -21,10 +21,15 @@ const cevaplar = [
   'your so cute, i could do you all night~',
   'baby can we make a tiktok later? :pleading_face: :point_right: :point_left: ',
   'baby can we go to a BLM protest later? :pleading_face:',
-  ':eye: :lips: :eye: ',
+  ':heart: :heart: :heart: :heart: ',
   'hi qt... can i get ur #?',
   'come here baby ily sm :cowboy: ',
   'do yuh maybe wanna netflix and chill later? :smiling_face_with_3_hearts: ',
+  'u tryna taste my secret sauce? :smirk: ',
+  'hey there, friend!',
+  'baby did you see i got verified by discord?! :pleading_face:',
+  'hey',
+  'u trying to go to my place after? :smirk:'
 ];
 exports.run = function (client, message, args) {
   var cevap = cevaplar[Math.floor(Math.random() * cevaplar.length)];

@@ -33,7 +33,7 @@ exports.run = async (client, message, args) => {
     .addField("Version: ", botver, true)
     .addField("Created at: ", botcreated, true)
     .addField("Boyfriend Bot Creator: ", "robbie#2544", true)
-    .addField("Boyfriend Bot Rewritten by: ", "Max Thakur#0831", true)
+    .addField("Boyfriend Bot Co-Owner: ", "Max Thakur#0831", true)
     .setFooter("Requested by " + message.author.tag, message.author.avatarURL({
       format: "png",
       dynamic: true,
