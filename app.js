@@ -34,18 +34,19 @@ const statusList = [
 ]
 
 client.on("ready", async () => {
-  client.user.setActivity("start up", { type: "PLAYING" })
+  client.user.setActivity("girl im rebooting hold up", { type: "PLAYING" })
   setInterval(async () => {
     i = Math.floor(Math.random() * (presenceList.length))
     client.user.setActivity(presenceList[i], { type: statusList[i] });
   }, 10000);
+  client.user.setStatus("idle")
 
   console.log('Boyfriend Bot is ready bitch')
 })
 
 client.on("message", async (msg) => {
   if (msg.author.bot || msg.channel.type === "dm") return;
-  //if (msg.content === "hi" || msg.content === "Hi" || msg.content === "Hello!" || msg.content === "Hello" || msg.content === "hello") return msg.channel.send("Hey, qt!")
+  if (msg.content === "boyfriend" || msg.content === "Boyfriend" || msg.content === "Boyfriend Bot" || msg.content === "boyfriend bot" || msg.content === "boyfriendbot") return msg.channel.send("did somebody say my name? :wink:")
   let mserver = await Server.findOne({ serverId: msg.guild.id })
   let prefix;
   if (mserver !== null) {
@@ -56,7 +57,7 @@ client.on("message", async (msg) => {
   let bpargs = msg.content.trim().split(' ')
   if (msg.mentions.has(client.user) && !msg.mentions.everyone) {
     if (bpargs.length > 1) return
-    return msg.reply("my prefix for this server is `" + prefix + "`")
+    return msg.reply("baby my prefix this server is `" + prefix + "`")
   }
   if (!msg.content.startsWith(prefix)) return;
   var args = msg.content.slice(prefix.length).trim().split(' ');
@@ -73,7 +74,8 @@ client.on("message", async (msg) => {
     let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     let dateTime = date + ' ' + time;
     console.log(`---`)
-    console.log(`${msg.author.tag} has used the ${prefix}${cmd} command`);
+    console.log(`a simp named ${msg.author.tag} has used the ${prefix}${cmd} command`);
+    console.log(`user id: ${msg.author.id} `);
     console.log(`server name: ${msg.guild.name} `);
     console.log(`server id: ${msg.guild.id} `);
     console.log(`time: ${dateTime}`)
@@ -89,7 +91,7 @@ client.on("guildCreate", async guild => {
       owner: guild.owner.id
     })
     await newServer.save()
-    //guild.owner.send("Hey there, thanks for adding Boyfriend bot! Please run `-setup` to get your server setup!")
+    guild.owner.send("Hey thanks for adding me to your server :heart: \nIf you ever need support join https://discord.gg/hBfmxVt thats also where you can see downtime/update information\nIf you enjoy me and want to help me grow vote for me! https://top.gg/bot/487395837610295317/vote\nIf you want to change my prefix run **-sprefix (prefix w/out the brackets)** \nOk bye :wave:")
   } catch (error) {
     console.log(error)
   }
@@ -98,6 +100,7 @@ client.on("guildCreate", async guild => {
 client.on("guildDelete", async guild => {
   try {
     await Server.deleteOne({ serverId: guild.id })
+    guild.owner.send("w-why are we breaking up though... :sob:\n(Sorry our bot didn't reach your expectations. If you have feedback for us join our Discord https://discord.gg/hBfmxVt and let us know why you removed boyfriend bot.)")
   } catch (error) {
     console.log(error)
   }
