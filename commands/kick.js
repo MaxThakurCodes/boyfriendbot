@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
       return message.reply('sorry bb, I couldn\'t get a Discord user with this userID!');
     }
   }
-  if (user === message.author) return message.channel.send('Silly, you can\'t kick yourself'); // Check if the user mention or the entered userID is the message author himsmelf
+  if (user === message.author) return message.channel.send('baby thats suicide- you can\'t kick yourself :frowning:'); // Check if the user mention or the entered userID is the message author himsmelf
   if (!message.guild.member(user).kickable) return message.reply('Hey bb, I don\'t seem to be able to kick that user cause they have a higher role than me :eyes: '); // Check if the user is kicknable with the bot's permissions
   let kEmbed = new Discord.MessageEmbed()
     .setTitle("[Logs] Kick")
@@ -37,7 +37,7 @@ module.exports.run = async (client, message, args) => {
     .setTimestamp()
   let logsChannel = message.guild.channels.cache.find(channel => channel.name === "logs")
   if (!logsChannel) return message.reply("baby please make a channel for logging, if you have one make sure I can chat on it. (Make a channel named `logs`.)")
-  await user.send("You were kicked from `" + message.guild.name + "` for the reason `" + kickReason + "`")
+  await user.send("Bruh you were kicked from `" + message.guild.name + "` with the reason `" + kickReason + "`")
   message.guild.member(user).kick(kickReason);
   logsChannel.send(kEmbed);
 }

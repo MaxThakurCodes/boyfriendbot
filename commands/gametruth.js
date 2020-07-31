@@ -3,7 +3,7 @@ const cevaplar = [
   'baby whats the last thing u searched 4 on ur phone?',
   'who do u have a crush on?',
   'have you ever walked into a wall?',
-  'have you ever done ***it** :flushed: ',
+  'have you ever done **it** :flushed: ',
   'lol do you cover your eyes during the scary parts of movies?',
   'whats ur worse habit?',
   'omg bitchh do you sing in the shower?',
@@ -27,6 +27,7 @@ const cevaplar = [
   'have you ever had lice? lol',
   'have u ever asked someone out?',
   'have u ever sent someone the wrong text? i have :pensive:',
+  'do you simp for me?',
 ];
 exports.run = function (client, message, args) {
   var cevap = cevaplar[Math.floor(Math.random() * cevaplar.length)];

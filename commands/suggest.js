@@ -6,7 +6,7 @@ module.exports.run = (client, message, args) => {
   let embed = new Discord.MessageEmbed()
     .setColor('7289DA')
     .setAuthor('Want to suggest a feature/phrase for your boyfriend bot to say?', client.user.displayAvatarURL)
-    .setDescription("Heres the link! https://forms.gle/3zxoL2jHzVDXhyim9")
+    .setDescription("[Suggest Something here!](https://forms.gle/3zxoL2jHzVDXhyim9)")
     .setTimestamp()
     .setFooter("Requested by " + message.author.tag, message.author.avatarURL({
       format: "png",

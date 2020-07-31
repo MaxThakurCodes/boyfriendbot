@@ -1,15 +1,9 @@
 const Discord = require('discord.js')
 const cevaplar = [
-  'why u finna be like that baby? :cry:',
-  'w- why would you do that? ugh',
-  'bruh wtf is up with you',
-  'omg- :pleading_face: ',
-  ':middle_finger: ',
-  'oh, i like that ;)',
-  ':flushed:',
-  '.',
-  'bruh fr stop ',
-  'ouch- that hurt',
+  '#### ######',
+  'hey #### lets play anothr game',
+  'omg i ###### #### ###',
+  '###############',
 
 ];
 exports.run = function (client, message, args) {
@@ -24,7 +18,7 @@ exports.conf = {
   permLevel: 0
 };
 exports.help = {
-  name: 'slap',
-  description: 'slap',
-  usage: '-slap'
+  name: 'robloxchat',
+  description: 'chatting like a roblox thing',
+  usage: '-robloxchat'
 };

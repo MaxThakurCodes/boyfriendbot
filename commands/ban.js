@@ -1,6 +1,6 @@
 const Discord = require("discord.js")
 module.exports.run = async (client, message, args) => {
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("bruh only admins can use this command")
+  if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("bruh only people who have ban perms ban can use this command")
   const user = message.mentions.users.first(); // returns the user object if an user mention exists
   let banReason;
   if (!args[1]) {

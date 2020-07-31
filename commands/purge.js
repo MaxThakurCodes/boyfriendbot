@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 module.exports.run = (client, message, args) => {
   if (message.member.hasPermission("MANAGE_MESSAGES")) {
     message.delete();
-    if (!args) return message.channel.send("lmao how am i supposed to purge messages if you don't give me a number?")
+    if (!args) return message.channel.send("lmao how am i supposed to purge messages if you don't give me a number? (1-100)")
     let amount = args[0]
     let pchannel
     if (args[1]) {
@@ -34,11 +34,11 @@ module.exports.run = (client, message, args) => {
     logsChannel.send(embed);
     Pchannel.bulkDelete(amount).catch(err => {
       if (err) {
-        message.channel.send("An error popped up, the error is:`" + err.message + "`, please join my support server https://discord.gg/hBfmxVt and contact `Max Thakur#0831`")
+        message.channel.send("baby an error popped up, the error is:`" + err.message + "`, please join my support server https://discord.gg/hBfmxVt and contact `Max Thakur#0831`")
       }
     })
   } else {
-    return message.channel.send("um baby only users who have the permission `MANAGE_MESSAGES` can use this command. sorry.")
+    return message.channel.send("um baby only users who have the permission `MANAGE_MESSAGES` can use this command. sorry. :pensive: ")
   }
 }
 

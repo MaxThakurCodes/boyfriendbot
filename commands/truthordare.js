@@ -27,7 +27,7 @@ const cevaplar = [
   'baby whats the last thing u searched 4 on ur phone?',
   'who do u have a crush on?',
   'have you ever walked into a wall?',
-  'have you ever done ***it** :flushed: ',
+  'have you ever done **it** :flushed: ',
   'lol do you cover your eyes during the scary parts of movies?',
   'whats ur worse habit?',
   'omg bitchh do you sing in the shower?',
