@@ -19,6 +19,7 @@
   "homepage": "https://github.com/MaxThakurCodes/boyfriendbot#readme",
   "dependencies": {
     "beautify": "0.0.8",
+    "dblapi.js": "^2.4.0",
     "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
     "mongoose": "^5.9.20",

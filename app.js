@@ -1,6 +1,8 @@
 //*Requires
 //Discord
 const Discord = require("discord.js");
+//DBL
+const DBL = require("dblapi.js");
 //dotenv (.env support)
 require("dotenv").config();
 //package.json
@@ -21,20 +23,24 @@ const Server = require("./models/server");
 const fs = require("fs");
 //client *no you*
 const client = new Discord.Client({ disableEveryone: true });
-//Unknow
-const queue = new Map();
+//dbl p2
+const dbl = new DBL(process.env.BFTOPGGTOKEN, client);
 //Presence List
 const presenceList = [
   "with your feelings",
   "for -help",
   "for -invite",
   `with version ${packageJson.version}`,
-  `1020 lines of code`,
+  `${client.guilds.cache.size} servers`,
 ];
 const statusList = ["PLAYING", "WATCHING", "WATCHING", "PLAYING", "WATCHING"];
 
 client.on("ready", async () => {
   client.user.setActivity("girl im rebooting hold up", { type: "PLAYING" });
+  setInterval(() => {
+    dbl.postStats(client.guilds.size);
+    console.log("ran");
+  }, 18000);
   setInterval(async () => {
     i = Math.floor(Math.random() * presenceList.length);
     client.user.setActivity(presenceList[i], { type: statusList[i] });
@@ -42,6 +48,10 @@ client.on("ready", async () => {
   client.user.setStatus("idle");
 
   console.log("Boyfriend Bot is ready bitch");
+});
+
+dbl.on("posted", () => {
+  console.log("Server count posted!");
 });
 
 client.on("message", async (msg) => {

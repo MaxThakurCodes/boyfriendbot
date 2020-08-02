@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 const flags = {
-  DISCORD_EMPLOYEE: "<:staffbadge:739462285260619800> Discord Employee",
+  DISCORD_EMPLOYEE: "<:staffbadge:739462285260619800> Discord Staff",
   DISCORD_PARTNER: "<:partner_badge:739462304093044736> Discord Partner",
   BUGHUNTER_LEVEL_1: "<:BugHunter:739455258375356456> Bug Hunter (Level 1)",
   BUGHUNTER_LEVEL_2: "<:BugHunterLvl2:739458527185076385> Bug Hunter (Level 2)",
