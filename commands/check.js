@@ -18,7 +18,14 @@ const flags = {
   HEADWAY_OWNER: "<:owner:739567503918759976> Headway Owner",
   HEADWAY_COOWNER: "🛠️ Headway Co-Owner",
   HEADWAY_DEV: "💻 Headway Developer",
+  HEADWAY_STAFF: "<:purpleverify:739571112421097726> Headway Staff",
 };
+let HeadwayStaff = [
+  "473255635689930764",
+  "302457454846017546",
+  "315534526988156928",
+  "230857721128288259",
+];
 module.exports.run = (client, message, args) => {
   let user = message.mentions.users.first();
   if (user) {
@@ -33,6 +40,9 @@ module.exports.run = (client, message, args) => {
     userFlags.push("HEADWAY_OWNER");
   } else if (user.id === "473255635689930764") {
     userFlags.push("HEADWAY_DEV");
+  }
+  if (HeadwayStaff.includes(user.id)) {
+    userFlags.push("HEADWAY_STAFF");
   }
   console.l;
   if (!user.bot) var abot = "Normal user";
@@ -52,7 +62,7 @@ module.exports.run = (client, message, args) => {
     .setThumbnail(user.displayAvatarURL)
     .addField("Username: ", `${user.username}`, true)
     .addField("ID: ", `${user.id}`, true)
-    .addField("Discriminator: ", `#${user.discriminator}`, true)
+    .addField("Tag: ", `${user.tag}`, true)
     .addField(
       "Nickname: ",
       `${member.nickname ? "" + member.nickname + "" : "None"}`,
