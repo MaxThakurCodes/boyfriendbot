@@ -15,8 +15,10 @@ const flags = {
   SYSTEM: "<:system:739461535289704490> System",
   VERIFIED_BOT: "<:verifiedbot:739460624748249088> Verified Bot",
   VERIFIED_DEVELOPER: "<:botdev:739453488047849552> Verified Bot Developer",
+  HEADWAY_OWNER: "<:owner:739567503918759976> Headway Owner",
+  HEADWAY_COOWNER: "🛠️ Headway Co-Owner",
+  HEADWAY_DEV: "💻 Headway Developer",
 };
-
 module.exports.run = (client, message, args) => {
   let user = message.mentions.users.first();
   if (user) {
@@ -25,6 +27,14 @@ module.exports.run = (client, message, args) => {
     user = message.author;
   }
   let userFlags = user.flags.toArray();
+  if (user.id === "302457454846017546") {
+    userFlags.push("HEADWAY_COOWNER");
+  } else if (user.id === "230857721128288259") {
+    userFlags.push("HEADWAY_OWNER");
+  } else if (user.id === "473255635689930764") {
+    userFlags.push("HEADWAY_DEV");
+  }
+  console.l;
   if (!user.bot) var abot = "Normal user";
   if (user.bot) var abot = "Bot";
 
