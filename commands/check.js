@@ -19,22 +19,32 @@ const flags = {
   HEADWAY_COOWNER: "🛠️ Headway Co-Owner",
   HEADWAY_DEV: "💻 Headway Developer",
   HEADWAY_STAFF: "<:purpleverify:739571112421097726> Headway Staff",
+  HEADWAY_PARTNER: "<:partner:740442267114012683> Headway Official Partner",
+  PLOVER_CEO: "<:ceo:740887777364672515> Plover CEO",
 };
 let HeadwayStaff = [
   "473255635689930764",
   "302457454846017546",
   "315534526988156928",
   "230857721128288259",
+  "446114292186742804",
+];
+let HeadwayPartners = [
+  "530279594016636938",
+  "457805013474082817",
+  "441912852710948864",
 ];
 module.exports.run = (client, message, args) => {
-  let user = message.mentions.users.first();
-  if (user) {
-    user = message.mentions.users.first();
+  let user;
+  if (args[0]) {
+    user = message.mentions.users.first() || client.users.cache.get(args[0]);
   } else {
     user = message.author;
   }
   let userFlags = user.flags.toArray();
-  if (user.id === "302457454846017546") {
+  if (user.id === "739287402551443527") {
+    userFlags.push("PLOVER_CEO");
+  } else if (user.id === "302457454846017546") {
     userFlags.push("HEADWAY_COOWNER");
   } else if (user.id === "230857721128288259") {
     userFlags.push("HEADWAY_OWNER");
@@ -44,7 +54,9 @@ module.exports.run = (client, message, args) => {
   if (HeadwayStaff.includes(user.id)) {
     userFlags.push("HEADWAY_STAFF");
   }
-  console.l;
+  if (HeadwayPartners.includes(user.id)) {
+    userFlags.push("HEADWAY_PARTNER");
+  }
   if (!user.bot) var abot = "Normal user";
   if (user.bot) var abot = "Bot";
 
