@@ -28,13 +28,14 @@ let HeadwayStaff = [
   "315534526988156928",
   "230857721128288259",
   "446114292186742804",
+  "647981740568084490",
 ];
 let HeadwayPartners = [
   "530279594016636938",
   "457805013474082817",
   "441912852710948864",
 ];
-module.exports.run = (client, message, args) => {
+module.exports.run = async (client, message, args) => {
   let user;
   if (args[0]) {
     user = message.mentions.users.first() || client.users.cache.get(args[0]);
