@@ -2,6 +2,10 @@ const fetch = require("node-fetch");
 const querystring = require("querystring");
 const Discord = require("discord.js");
 module.exports.run = async (client, message, args) => {
+  if (message.channel.nsfw !== true)
+    return message.reply(
+      "lmao baby lets get out of work first- (must be used in a channel marked NSFW)"
+    );
   const searchString = querystring.stringify({ term: args.join(" ") });
 
   if (!args.join(" "))
