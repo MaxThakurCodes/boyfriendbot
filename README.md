@@ -1,11 +1,4 @@
 # Boyfriend Bot
-
-<a href="https://top.gg/bot/487395837610295317" >
-  <img src="https://top.gg/api/widget/status/487395837610295317.svg" alt="boyfriend bot" />
-</a>
-<a href="https://top.gg/bot/487395837610295317" >
-  <img src="https://top.gg/api/widget/upvotes/487395837610295317.svg" alt="boyfriend bot" />
-</a>
 I released this as I requested that all of my code was removed from boyfriend bot's SRC, however it wasn't... So, here we are now!
 
 ## How to use this!
