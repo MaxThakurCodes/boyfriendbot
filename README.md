@@ -16,4 +16,4 @@ I released this as I requested that all of my code was removed from boyfriend bo
    Here is my [Patreon](https://www.patreon.com/MaxThakurCodes). 
    [Want to buy me a cup of coffee?](https://www.buymeacoffee.com/MaxThakurCodes).
 ## License
-I am using the [GNU Affero General Public License v3.0](LICENSE).
+I am using the [Apache License 2.0](LICENSE).
