@@ -2,7 +2,12 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
 
-  let user = message.mentions.users.first() || message.author;
+  let user;
+  if (args[0]) {
+    user = message.mentions.users.first() || client.users.cache.get(args[0]);
+  } else {
+    user = message.author;
+  }
   let embed = new Discord.MessageEmbed()
     .setDescription(`Damn whos that qt? <@${user.id}>`)
     .setAuthor(`${user.username}#${user.discriminator}`, await client.user.avatarURL({
