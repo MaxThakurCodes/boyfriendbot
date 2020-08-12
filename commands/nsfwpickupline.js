@@ -4,7 +4,7 @@ require("dotenv").config()
 exports.run = async function (client, message, args) {
   if (!message.channel.nsfw) return message.channel.send("um can we go somewhere private for this?- (must be used in a channel marked NSFW)")
   const reddit = new RandomReddit({
-    username: 'MaxThakurCodes',
+    username: process.env.redditu,
     password: process.env.redditp,
     app_id: process.env.APIK,
     api_secret: process.env.APIS,
